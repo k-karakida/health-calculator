@@ -1,0 +1,413 @@
+.home {
+  color: #263238;
+}
+
+/* =========================
+   Hero
+========================= */
+
+.home__hero {
+  background-color: #f7faf8;
+  padding: 72px 20px 80px;
+}
+
+.home__hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home__eyebrow,
+.home__section-eyebrow {
+  margin: 0 0 12px;
+
+  color: #4caf7d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.home__title {
+  margin: 0;
+
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+}
+
+.home__description {
+  margin: 20px 0 36px;
+
+  color: #607d8b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================
+   Calculator
+========================= */
+
+.home__calculator {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 32px;
+
+  background-color: #ffffff;
+  border: 1px solid #e5eae7;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 30px rgba(38, 50, 56, 0.06);
+  text-align: left;
+}
+
+.home__calculator-title {
+  margin: 0;
+
+  font-size: 22px;
+  text-align: center;
+}
+
+.home__calculator-description {
+  margin: 8px 0 28px;
+
+  color: #78909c;
+  font-size: 13px;
+  text-align: center;
+}
+
+.home__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home__field label {
+  color: #455a64;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.home__input-wrapper {
+  position: relative;
+}
+
+.home__input-wrapper input {
+  width: 100%;
+  height: 52px;
+  padding: 0 48px 0 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cfd8d3;
+  border-radius: 8px;
+
+  color: #263238;
+  background-color: #ffffff;
+
+  font-size: 16px;
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.home__input-wrapper input:focus {
+  border-color: #4caf7d;
+
+  box-shadow: 0 0 0 3px rgba(76, 175, 125, 0.12);
+}
+
+.home__input-wrapper span {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+
+  transform: translateY(-50%);
+
+  color: #78909c;
+  font-size: 14px;
+}
+
+.home__calculate-button {
+  width: 100%;
+  height: 52px;
+  margin-top: 4px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #4caf7d;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.home__calculate-button:hover {
+  background-color: #41996d;
+}
+
+.home__calculate-button:active {
+  transform: translateY(1px);
+}
+
+/* =========================
+   Result
+========================= */
+
+.home__result {
+  max-width: 520px;
+  margin: 24px auto 0;
+  padding: 28px;
+
+  background-color: #eaf6ef;
+  border: 1px solid #d5ecdf;
+  border-radius: 16px;
+
+  text-align: center;
+}
+
+.home__result-label {
+  margin: 0;
+
+  color: #607d8b;
+  font-size: 13px;
+}
+
+.home__result-value {
+  margin: 4px 0;
+
+  color: #263238;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home__result-category {
+  margin: 0;
+
+  color: #4caf7d;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.home__result-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 24px;
+}
+
+.home__result-links a {
+  padding: 10px 14px;
+
+  border: 1px solid #c8dfd2;
+  border-radius: 6px;
+
+  background-color: #ffffff;
+  color: #397d5b;
+
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.home__result-links a:hover {
+  background-color: #f7faf8;
+}
+
+/* =========================
+   Tools
+========================= */
+
+.home__tools {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.home__section-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.home__section-heading {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.home__section-heading h2 {
+  margin: 0 0 12px;
+
+  font-size: 28px;
+}
+
+.home__section-heading p:last-child {
+  margin: 0;
+
+  color: #78909c;
+  font-size: 14px;
+}
+
+.home__tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.home__tool-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 180px;
+  padding: 24px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e5eae7;
+  border-radius: 12px;
+
+  color: #263238;
+  background-color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.home__tool-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #c8dfd2;
+
+  box-shadow: 0 8px 24px rgba(38, 50, 56, 0.08);
+}
+
+.home__tool-icon {
+  margin-bottom: 18px;
+
+  color: #4caf7d;
+  font-size: 28px;
+}
+
+.home__tool-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.home__tool-description {
+  margin-top: 8px;
+
+  color: #78909c;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.home__tool-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+
+  color: #4caf7d;
+  font-size: 18px;
+}
+
+/* =========================
+   About
+========================= */
+
+.home__about {
+  padding: 80px 20px;
+
+  background-color: #f7faf8;
+}
+
+.home__about-inner {
+  max-width: 700px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.home__about h2 {
+  margin: 0 0 20px;
+
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+.home__about p:last-child {
+  margin: 0;
+
+  color: #607d8b;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+  .home__hero {
+    padding: 52px 16px 60px;
+  }
+
+  .home__title {
+    font-size: 32px;
+  }
+
+  .home__description {
+    font-size: 14px;
+  }
+
+  .home__br-pc {
+    display: none;
+  }
+
+  .home__calculator {
+    padding: 24px 20px;
+  }
+
+  .home__tools {
+    padding: 60px 16px;
+  }
+
+  .home__tool-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home__tool-card {
+    min-height: 150px;
+  }
+
+  .home__about {
+    padding: 60px 20px;
+  }
+
+  .home__result-links {
+    flex-direction: column;
+  }
+
+  .home__result-links a {
+    display: block;
+  }
+}

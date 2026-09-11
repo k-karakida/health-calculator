@@ -1,0 +1,99 @@
+.bmi-table-page {
+  color: #263238;
+}
+
+.bmi-table-page__hero {
+  padding: 64px 20px;
+
+  background-color: #f7faf8;
+
+  text-align: center;
+}
+
+.bmi-table-page__eyebrow {
+  margin: 0 0 10px;
+
+  color: #4caf7d;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.bmi-table-page__hero h1 {
+  margin: 0;
+
+  font-size: 36px;
+}
+
+.bmi-table-page__hero p:last-child {
+  margin: 16px 0 0;
+
+  color: #607d8b;
+  font-size: 14px;
+}
+
+.bmi-table-page__content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 56px 20px;
+}
+
+.bmi-table {
+  overflow-x: auto;
+
+  border: 1px solid #e5eae7;
+  border-radius: 12px;
+}
+
+.bmi-table table {
+  width: 100%;
+  min-width: 700px;
+
+  border-collapse: collapse;
+
+  background-color: #ffffff;
+
+  font-size: 13px;
+}
+
+.bmi-table th,
+.bmi-table td {
+  padding: 14px 12px;
+
+  border-right: 1px solid #e5eae7;
+  border-bottom: 1px solid #e5eae7;
+
+  text-align: center;
+  white-space: nowrap;
+}
+
+.bmi-table thead th {
+  background-color: #f7faf8;
+
+  font-weight: 700;
+}
+
+.bmi-table tbody th {
+  background-color: #f7faf8;
+
+  font-weight: 700;
+}
+
+.bmi-table-page__description {
+  max-width: 700px;
+  margin: 48px auto 0;
+}
+
+.bmi-table-page__description h2 {
+  margin-bottom: 16px;
+
+  font-size: 24px;
+}
+
+.bmi-table-page__description li {
+  margin-bottom: 8px;
+
+  color: #546e7a;
+  line-height: 1.8;
+}
