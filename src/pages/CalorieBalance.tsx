@@ -5,6 +5,7 @@ import CalculateButton from "../components/calculator/CalculateButton";
 import ResultCard from "../components/calculator/ResultCard";
 import "./CalorieBalance.css";
 
+// カロリー収支計算のページ
 const CalorieBalance = () => {
   const [intakeCalories, setIntakeCalories] =
     useState("");
@@ -14,6 +15,8 @@ const CalorieBalance = () => {
 
   const [result, setResult] =
     useState<number | null>(null);
+
+  const [error, setError] = useState("");
 
   const handleCalculate = () => {
     const intake = Number(intakeCalories);
@@ -26,9 +29,11 @@ const CalorieBalance = () => {
       burn < 0
     ) {
       setResult(null);
+      setError("正しい値を入力してください");
       return;
     }
 
+    setError("");
     const balance = intake - burn;
 
     setResult(Math.round(balance));
@@ -114,6 +119,12 @@ const CalorieBalance = () => {
           placeholder="例：2300"
           onChange={setBurnCalories}
         />
+
+        {error && (
+          <p className="calorie-balance__error">
+            {error}
+          </p>
+        )}
 
         <CalculateButton onClick={handleCalculate}>
           カロリー収支を計算する

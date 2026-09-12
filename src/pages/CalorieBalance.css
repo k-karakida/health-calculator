@@ -227,3 +227,10 @@
     font-size: 13px;
   }
 }
+
+.calorie-balance__error { 
+  margin: 0; 
+  color: #D32F2F; 
+  font-size: 14px; 
+  font-weight: 600;
+}

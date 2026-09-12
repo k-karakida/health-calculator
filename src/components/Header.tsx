@@ -107,21 +107,21 @@ const Header = () => {
               </Link>
 
               <Link
-                to="/bmi-table"
-                onClick={() =>
-                  handleNavClick("/bmi-table")
-                }
-              >
-                BMI早見表
-              </Link>
-
-              <Link
                 to="/height-weight"
                 onClick={() =>
                   handleNavClick("/height-weight")
                 }
               >
                 身長別体重
+              </Link>
+
+              <Link
+                to="/bmi-table"
+                onClick={() =>
+                  handleNavClick("/bmi-table")
+                }
+              >
+                BMI早見表
               </Link>
 
             </div>

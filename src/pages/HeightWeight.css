@@ -74,3 +74,10 @@
 .height-weight-table th {
   background-color: #f7faf8;
 }
+
+.height-weight__error { 
+  margin: 0; 
+  color: #D32F2F; 
+  font-size: 14px; 
+  font-weight: 600;
+}

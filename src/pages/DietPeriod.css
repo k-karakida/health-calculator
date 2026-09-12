@@ -253,3 +253,10 @@
     gap: 8px;
   }
 }
+
+.diet-period__error { 
+  margin: 0; 
+  color: #D32F2F; 
+  font-size: 14px; 
+  font-weight: 600;
+}

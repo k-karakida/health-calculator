@@ -10,7 +10,6 @@ import {
 } from "../utils/calorie";
 import "./BasalMetabolism.css";
 
-// 基礎代謝計算ページ
 const BasalMetabolism = () => {
   const [gender, setGender] = useState<Gender>("male");
   const [age, setAge] = useState("");
@@ -18,6 +17,7 @@ const BasalMetabolism = () => {
   const [weight, setWeight] = useState("");
 
   const [result, setResult] = useState<number | null>(null);
+  const [error, setError] = useState("");
 
   const handleCalculate = () => {
     const ageValue = Number(age);
@@ -33,8 +33,11 @@ const BasalMetabolism = () => {
       weightValue <= 0
     ) {
       setResult(null);
+      setError("正しい値を入力してください");
       return;
     }
+
+    setError("");
 
     const basalMetabolism = calculateBasalMetabolism(
       gender,
@@ -116,6 +119,12 @@ const BasalMetabolism = () => {
           placeholder="例：65"
           onChange={setWeight}
         />
+
+        {error && (
+          <p className="basal-metabolism__error">
+            {error}
+          </p>
+        )}
 
         <CalculateButton onClick={handleCalculate}>
           基礎代謝量を計算する

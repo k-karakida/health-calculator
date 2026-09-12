@@ -10,17 +10,22 @@ import { calculateStandardWeight } from "../utils/bmi";
 import "../components/calculator/Calculator.css";
 import "./Bmi.css";
 
+// 適正体重計算のページ
 const IdealWeight = () => {
   const [height, setHeight] = useState("");
   const [standardWeight, setStandardWeight] =
     useState<number | null>(null);
+  const [error, setError] = useState("");
 
   const handleCalculate = () => {
     const heightValue = Number(height);
 
     if (!height || heightValue <= 0) {
+      setError("正しい値を入力してください");
       return;
     }
+
+    setError("");
 
     const result =
       calculateStandardWeight(heightValue);
@@ -56,6 +61,12 @@ const IdealWeight = () => {
             placeholder="170"
             onChange={setHeight}
           />
+
+          {error && (
+            <p className="calculator-page__error">
+              {error}
+            </p>
+          )}
 
           <CalculateButton
             onClick={handleCalculate}

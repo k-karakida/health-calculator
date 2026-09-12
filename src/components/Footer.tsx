@@ -40,11 +40,11 @@ const Footer = () => {
             <Link to="/ideal-weight" onClick={() => handleNavClick("/ideal-weight")}>
               適正体重計算
             </Link>
-            <Link to="/bmi-table" onClick={() => handleNavClick("/bmi-table")}>
-              BMI早見表
-            </Link>
             <Link to="/height-weight" onClick={() => handleNavClick("/height-weight")}>
               身長別体重表
+            </Link>
+            <Link to="/bmi-table" onClick={() => handleNavClick("/bmi-table")}>
+              BMI早見表
             </Link>
           </div>
 

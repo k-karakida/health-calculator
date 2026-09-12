@@ -12,6 +12,7 @@ const DietPeriod = () => {
 
   const [resultWeeks, setResultWeeks] = useState<number | null>(null);
   const [resultMonths, setResultMonths] = useState<number | null>(null);
+  const [error, setError] = useState("");
 
   const handleCalculate = () => {
     const current = Number(currentWeight);
@@ -29,6 +30,7 @@ const DietPeriod = () => {
     ) {
       setResultWeeks(null);
       setResultMonths(null);
+      setError("正しい値を入力してください");
       return;
     }
 
@@ -39,6 +41,7 @@ const DietPeriod = () => {
 
     setResultWeeks(Math.ceil(weeks));
     setResultMonths(Math.round(months * 10) / 10);
+    setError("");
   };
 
   return (
@@ -146,6 +149,12 @@ const DietPeriod = () => {
             </label>
           </div>
         </div>
+
+        {error && (
+          <p className="diet-period__error">
+            {error}
+          </p>
+        )}
 
         <CalculateButton onClick={handleCalculate}>
           ダイエット期間を計算する

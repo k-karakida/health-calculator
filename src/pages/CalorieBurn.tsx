@@ -50,6 +50,7 @@ const CalorieBurn = () => {
   const [result, setResult] = useState<number | null>(null);
   const [basalMetabolism, setBasalMetabolism] =
     useState<number | null>(null);
+  const [error, setError] = useState("");
 
   const handleCalculate = () => {
     const ageValue = Number(age);
@@ -66,8 +67,11 @@ const CalorieBurn = () => {
     ) {
       setResult(null);
       setBasalMetabolism(null);
+      setError("正しい値を入力してください");
       return;
     }
+
+    setError("");
 
     const basal = calculateBasalMetabolism(
       gender,
@@ -199,6 +203,12 @@ const CalorieBurn = () => {
             ))}
           </div>
         </div>
+
+        {error && (
+          <p className="calorie-burn__error">
+            {error}
+          </p>
+        )}
 
         <CalculateButton onClick={handleCalculate}>
           消費カロリーを計算する

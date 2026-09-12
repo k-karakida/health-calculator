@@ -77,6 +77,7 @@ const CalorieIntake = () => {
 
   const [result, setResult] = useState<number | null>(null);
   const [calorieBurn, setCalorieBurn] = useState<number | null>(null);
+  const [error, setError] = useState("");
 
   const handleCalculate = () => {
     const ageValue = Number(age);
@@ -93,8 +94,11 @@ const CalorieIntake = () => {
     ) {
       setResult(null);
       setCalorieBurn(null);
+      setError("正しい値を入力してください");
       return;
     }
+
+    setError("");
 
     const selectedActivity = activityLevels.find(
       (activity) => activity.id === activityLevel
@@ -267,6 +271,12 @@ const CalorieIntake = () => {
             ))}
           </div>
         </div>
+
+        {error && (
+          <p className="calorie-intake__error">
+            {error}
+          </p>
+        )}
 
         <CalculateButton onClick={handleCalculate}>
           摂取カロリーを計算する

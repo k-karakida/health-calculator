@@ -33,18 +33,22 @@ const bmiValues = [
   },
 ];
 
+// 身長別体重を計算するページ
 const HeightWeight = () => {
   const [height, setHeight] = useState("");
   const [calculatedHeight, setCalculatedHeight] =
     useState<number | null>(null);
+  const [error, setError] = useState("");
 
   const handleCalculate = () => {
     const heightValue = Number(height);
 
     if (!height || heightValue <= 0) {
+      setError("正しい値を入力してください");
       return;
     }
 
+    setError("");
     setCalculatedHeight(heightValue);
   };
 
@@ -76,6 +80,12 @@ const HeightWeight = () => {
             placeholder="170"
             onChange={setHeight}
           />
+
+          {error && (
+            <p className="height-weight__error">
+              {error}
+            </p>
+          )}
 
           <CalculateButton
             onClick={handleCalculate}

@@ -17,6 +17,7 @@ const Bmi = () => {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [bmi, setBmi] = useState<number | null>(null);
+  const [error, setError] = useState("");
 
   const handleCalculate = () => {
     const heightValue = Number(height);
@@ -28,8 +29,11 @@ const Bmi = () => {
       heightValue <= 0 ||
       weightValue <= 0
     ) {
+      setError("正しい値を入力してください");
       return;
     }
+
+    setError("");
 
     const result = calculateBmi(
       heightValue,
@@ -80,6 +84,12 @@ const Bmi = () => {
             placeholder="65"
             onChange={setWeight}
           />
+
+          {error && (
+            <p className="calculator-page__error">
+              {error}
+            </p>
+          )}
 
           <CalculateButton
             onClick={handleCalculate}
