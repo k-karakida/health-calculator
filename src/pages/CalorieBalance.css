@@ -1,0 +1,229 @@
+.calorie-balance {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px 80px;
+}
+
+.calorie-balance__header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.calorie-balance__header h1 {
+  margin: 0 0 18px;
+  color: #263238;
+  font-size: 36px;
+  line-height: 1.4;
+}
+
+.calorie-balance__header p {
+  margin: 0;
+  color: #546e7a;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 計算結果 */
+
+.calorie-balance__results {
+  margin-top: 25px;
+}
+
+.calorie-balance__result-status {
+  margin-bottom: 12px;
+  padding: 18px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.calorie-balance__result-status.is-positive {
+  background-color: #fff8e8;
+}
+
+.calorie-balance__result-status.is-negative {
+  background-color: #f3faf6;
+}
+
+.calorie-balance__result-status.is-balanced {
+  background-color: #f5f7f8;
+}
+
+.calorie-balance__result-status-label {
+  margin: 0 0 6px;
+  color: #263238;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.calorie-balance__result-status-description {
+  margin: 0;
+  color: #546e7a;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* 計算式 */
+
+.calorie-balance__section {
+  margin-top: 45px;
+}
+
+.calorie-balance__section h2 {
+  margin: 0 0 18px;
+  padding-left: 14px;
+  border-left: 5px solid #4caf7d;
+  color: #263238;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.calorie-balance__section p {
+  margin: 0 0 14px;
+  color: #455a64;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.calorie-balance__section p:last-child {
+  margin-bottom: 0;
+}
+
+.calorie-balance__formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 25px;
+  padding: 24px 20px;
+  border-radius: 10px;
+  background-color: #f3faf6;
+  color: #263238;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.calorie-balance__formula strong {
+  color: #4caf7d;
+  font-size: 20px;
+}
+
+/* カロリー収支の説明 */
+
+.calorie-balance__guide {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.calorie-balance__guide-item {
+  padding: 18px 20px;
+  border: 1px solid #e0e8e4;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.calorie-balance__guide-item h3 {
+  margin: 0 0 8px;
+  color: #263238;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.calorie-balance__guide-item p {
+  margin: 0;
+  color: #607d8b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* タブレット・スマホ */
+
+@media (max-width: 768px) {
+  .calorie-balance {
+    padding: 40px 16px 60px;
+  }
+
+  .calorie-balance__header {
+    margin-bottom: 32px;
+  }
+
+  .calorie-balance__header h1 {
+    font-size: 30px;
+  }
+
+  .calorie-balance__header p {
+    font-size: 15px;
+  }
+
+  .calorie-balance__section {
+    margin-top: 38px;
+  }
+
+  .calorie-balance__section h2 {
+    font-size: 22px;
+  }
+
+  .calorie-balance__formula {
+    gap: 9px;
+    padding: 20px 10px;
+    font-size: 14px;
+  }
+
+  .calorie-balance__formula strong {
+    font-size: 18px;
+  }
+}
+
+/* 小さいスマホ */
+
+@media (max-width: 375px) {
+  .calorie-balance {
+    padding: 35px 12px 50px;
+  }
+
+  .calorie-balance__header h1 {
+    font-size: 27px;
+  }
+
+  .calorie-balance__header p {
+    font-size: 14px;
+  }
+
+  .calorie-balance__result-status {
+    padding: 16px;
+  }
+
+  .calorie-balance__result-status-label {
+    font-size: 16px;
+  }
+
+  .calorie-balance__result-status-description {
+    font-size: 13px;
+  }
+
+  .calorie-balance__formula {
+    gap: 5px;
+    padding: 18px 6px;
+    font-size: 12px;
+  }
+
+  .calorie-balance__formula strong {
+    font-size: 16px;
+  }
+
+  .calorie-balance__section h2 {
+    font-size: 21px;
+  }
+
+  .calorie-balance__section p {
+    font-size: 14px;
+  }
+
+  .calorie-balance__guide-item {
+    padding: 16px;
+  }
+
+  .calorie-balance__guide-item p {
+    font-size: 13px;
+  }
+}

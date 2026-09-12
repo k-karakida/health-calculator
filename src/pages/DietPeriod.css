@@ -1,0 +1,255 @@
+.diet-period {
+  width: 100%;
+}
+
+/* =========================
+   Header
+========================= */
+
+.diet-period__header {
+  text-align: center;
+  padding: 48px 20px 40px;
+}
+
+.diet-period__header h1 {
+  margin: 0 0 16px;
+  color: #263238;
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+.diet-period__header p {
+  margin: 0;
+  color: #607D8B;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================
+   Weekly loss
+========================= */
+
+.diet-period__weekly-loss {
+  margin-top: 8px;
+}
+
+.diet-period__label {
+  margin: 0 0 12px;
+  color: #263238;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.diet-period__weekly-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.diet-period__weekly-options label {
+  display: block;
+  cursor: pointer;
+}
+
+.diet-period__weekly-options input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.diet-period__weekly-options label > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid #DCE5E0;
+  border-radius: 8px;
+  background: #FFFFFF;
+  transition: all 0.2s ease;
+}
+
+.diet-period__weekly-options label:hover > span {
+  border-color: #4CAF7D;
+}
+
+.diet-period__weekly-options label.is-selected > span {
+  border-color: #4CAF7D;
+  background: #E8F5EE;
+}
+
+.diet-period__weekly-options strong {
+  color: #263238;
+  font-size: 16px;
+}
+
+.diet-period__weekly-options small {
+  color: #607D8B;
+  font-size: 13px;
+}
+
+/* =========================
+   Sub result
+========================= */
+
+.diet-period__sub-result {
+  max-width: 600px;
+  margin: 12px auto 0;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: #F7FAF8;
+  text-align: center;
+}
+
+.diet-period__sub-result p {
+  margin: 0;
+  color: #607D8B;
+  font-size: 15px;
+}
+
+.diet-period__sub-result strong {
+  color: #4CAF7D;
+  font-size: 18px;
+}
+
+/* =========================
+   Section
+========================= */
+
+.diet-period__section {
+  max-width: 760px;
+  margin: 48px auto 0;
+  padding: 0 20px;
+}
+
+.diet-period__section h2 {
+  margin: 0 0 18px;
+  padding-left: 14px;
+  border-left: 5px solid #4caf7d;
+  color: #263238;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.diet-period__section p {
+  margin: 0 0 16px;
+  color: #455A64;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* =========================
+   Formula
+========================= */
+
+.diet-period__formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #F7FAF8;
+  color: #263238;
+  font-size: 15px;
+  text-align: center;
+}
+
+.diet-period__formula strong {
+  color: #4CAF7D;
+  font-size: 20px;
+}
+
+/* =========================
+   Example
+========================= */
+
+.diet-period__example {
+  padding: 24px;
+  border-radius: 8px;
+  background: #E8F5EE;
+}
+
+.diet-period__example p {
+  color: #455A64;
+}
+
+.diet-period__example p:last-child {
+  margin-bottom: 0;
+}
+
+.diet-period__example strong {
+  color: #263238;
+}
+
+.diet-period__example-formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 16px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: #263238;
+  text-align: center;
+}
+
+.diet-period__example-formula strong {
+  font-size: 16px;
+}
+
+.diet-period__example-formula span {
+  color: #4CAF7D;
+  font-weight: 600;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+  .diet-period__header {
+    padding: 36px 16px 32px;
+  }
+
+  .diet-period__header h1 {
+    font-size: 28px;
+  }
+
+  .diet-period__header p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .diet-period__section {
+    margin-top: 40px;
+    padding: 0 16px;
+  }
+
+  .diet-period__section h2 {
+    font-size: 20px;
+  }
+
+  .diet-period__formula {
+    gap: 8px;
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .diet-period__formula strong {
+    font-size: 18px;
+  }
+
+  .diet-period__example {
+    padding: 20px 16px;
+  }
+
+  .diet-period__example-formula {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

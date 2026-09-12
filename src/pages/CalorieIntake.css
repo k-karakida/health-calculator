@@ -1,0 +1,306 @@
+.calorie-intake {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px 80px;
+}
+
+.calorie-intake__header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.calorie-intake__header h1 {
+  margin: 0 0 18px;
+  color: #263238;
+  font-size: 36px;
+  line-height: 1.4;
+}
+
+.calorie-intake__header p {
+  margin: 0;
+  color: #546e7a;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 共通ラベル */
+
+.calorie-intake__label {
+  margin: 0 0 10px;
+  color: #263238;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* 性別 */
+
+.calorie-intake__gender {
+  margin-bottom: 20px;
+}
+
+.calorie-intake__gender-options {
+  display: flex;
+  gap: 12px;
+}
+
+.calorie-intake__gender-options label {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 15px;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #455a64;
+  font-size: 15px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.calorie-intake__gender-options label:hover {
+  border-color: #4caf7d;
+  background-color: #f3faf6;
+}
+
+.calorie-intake__gender-options input {
+  margin: 0;
+  accent-color: #4caf7d;
+}
+
+/* 身体活動レベル */
+
+.calorie-intake__activity {
+  margin-top: 8px;
+  margin-bottom: 22px;
+}
+
+.calorie-intake__activity-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calorie-intake__activity-options label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.calorie-intake__activity-options label:hover,
+.calorie-intake__activity-options label.is-selected {
+  border-color: #4caf7d;
+  background-color: #f3faf6;
+}
+
+.calorie-intake__activity-options input {
+  margin-top: 3px;
+  accent-color: #4caf7d;
+}
+
+.calorie-intake__activity-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.calorie-intake__activity-content strong {
+  color: #263238;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.calorie-intake__activity-content small {
+  color: #607d8b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* 目標 */
+
+.calorie-intake__goal {
+  margin-bottom: 24px;
+}
+
+.calorie-intake__goal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calorie-intake__goal-options label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.calorie-intake__goal-options label:hover,
+.calorie-intake__goal-options label.is-selected {
+  border-color: #4caf7d;
+  background-color: #f3faf6;
+}
+
+.calorie-intake__goal-options input {
+  margin-top: 3px;
+  accent-color: #4caf7d;
+}
+
+.calorie-intake__goal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.calorie-intake__goal-content strong {
+  color: #263238;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.calorie-intake__goal-content small {
+  color: #607d8b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* 計算結果 */
+
+.calorie-intake__results {
+  margin-top: 25px;
+}
+
+.calorie-intake__burn {
+  margin-top: 12px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  background-color: #f3faf6;
+  text-align: center;
+}
+
+.calorie-intake__burn p {
+  margin: 0;
+  color: #546e7a;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.calorie-intake__burn strong {
+  margin-left: 5px;
+  color: #2e7d57;
+}
+
+/* 説明 */
+
+.calorie-intake__section {
+  margin-top: 45px;
+}
+
+.calorie-intake__section h2 {
+  margin: 0 0 18px;
+  padding-left: 14px;
+  border-left: 5px solid #4caf7d;
+  color: #263238;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.calorie-intake__section p {
+  margin: 0 0 14px;
+  color: #455a64;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.calorie-intake__section p:last-child {
+  margin-bottom: 0;
+}
+
+/* タブレット・スマホ */
+
+@media (max-width: 768px) {
+  .calorie-intake {
+    padding: 40px 16px 60px;
+  }
+
+  .calorie-intake__header {
+    margin-bottom: 32px;
+  }
+
+  .calorie-intake__header h1 {
+    font-size: 30px;
+  }
+
+  .calorie-intake__header p {
+    font-size: 15px;
+  }
+
+  .calorie-intake__section {
+    margin-top: 38px;
+  }
+
+  .calorie-intake__section h2 {
+    font-size: 22px;
+  }
+}
+
+/* 小さいスマホ */
+
+@media (max-width: 375px) {
+  .calorie-intake {
+    padding: 35px 12px 50px;
+  }
+
+  .calorie-intake__header h1 {
+    font-size: 27px;
+  }
+
+  .calorie-intake__header p {
+    font-size: 14px;
+  }
+
+  .calorie-intake__gender-options {
+    gap: 8px;
+  }
+
+  .calorie-intake__gender-options label {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+
+  .calorie-intake__activity-options label,
+  .calorie-intake__goal-options label {
+    padding: 13px;
+  }
+
+  .calorie-intake__activity-content small,
+  .calorie-intake__goal-content small {
+    font-size: 12px;
+  }
+
+  .calorie-intake__section h2 {
+    font-size: 21px;
+  }
+
+  .calorie-intake__section p {
+    font-size: 14px;
+  }
+}

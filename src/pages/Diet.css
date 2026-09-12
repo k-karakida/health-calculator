@@ -1,30 +1,30 @@
-.home {
-  max-width: 1100px;
+.diet-page {
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px 80px;
+  padding: 50px 20px 80px;
 }
+
 
 /* =========================
-   Hero
+   Header
 ========================= */
 
-.home__hero {
+.diet-page__header {
+  margin-bottom: 55px;
   text-align: center;
-  padding: 70px 20px 60px;
 }
 
-.home__hero h1 {
-  margin: 0 0 20px;
+.diet-page__header h1 {
+  margin: 0 0 18px;
   color: #263238;
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 36px;
   line-height: 1.4;
 }
 
-.home__hero p {
+.diet-page__header p {
   margin: 0;
   color: #546e7a;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -33,16 +33,18 @@
    Section
 ========================= */
 
-.home__section {
-  margin-bottom: 70px;
+.diet-page__section {
+  margin-bottom: 60px;
 }
 
-.home__section h2 {
-  margin: 0 0 28px;
+.diet-page__section h2 {
+  margin: 0 0 25px;
   padding-left: 14px;
+
   border-left: 5px solid #4caf7d;
+
   color: #263238;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1.4;
 }
 
@@ -51,48 +53,58 @@
    Cards
 ========================= */
 
-.home__cards {
+.diet-page__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-.home__card {
+.diet-page__card {
   display: block;
+
   padding: 26px;
+
   border: 1px solid #e0e8e4;
   border-radius: 12px;
+
   background-color: #ffffff;
+
   color: inherit;
   text-decoration: none;
+
   box-shadow: 0 2px 8px rgba(38, 50, 56, 0.05);
+
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
     border-color 0.2s ease;
 }
 
-.home__card:hover {
+.diet-page__card:hover {
   transform: translateY(-3px);
+
   border-color: #4caf7d;
+
   box-shadow: 0 6px 18px rgba(38, 50, 56, 0.1);
 }
 
-.home__card h3 {
+.diet-page__card h3 {
   margin: 0 0 12px;
+
   color: #263238;
   font-size: 20px;
   line-height: 1.5;
 }
 
-.home__card p {
+.diet-page__card p {
   margin: 0 0 18px;
+
   color: #546e7a;
   font-size: 15px;
   line-height: 1.8;
 }
 
-.home__card span {
+.diet-page__card span {
   color: #4caf7d;
   font-size: 14px;
   font-weight: 700;
@@ -100,91 +112,77 @@
 
 
 /* =========================
-   Featured Card
+   Note
 ========================= */
 
-.home__card--featured {
-  border: 2px solid #4caf7d;
-  background-color: #f3faf6;
-}
+.diet-page__note {
+  padding: 30px;
 
-.home__card--featured h3 {
-  color: #2e7d57;
-}
-
-.home__card--featured span {
-  font-size: 15px;
-}
-
-
-/* =========================
-   About
-========================= */
-
-.home__about {
-  margin-top: 20px;
-  padding: 40px;
   border-radius: 12px;
+
   background-color: #e8f5ee;
-  text-align: center;
 }
 
-.home__about h2 {
-  margin: 0 0 18px;
+.diet-page__note h2 {
+  margin: 0 0 15px;
+
   color: #263238;
-  font-size: 24px;
+  font-size: 21px;
 }
 
-.home__about p {
-  max-width: 700px;
-  margin: 0 auto;
+.diet-page__note p {
+  margin: 0 0 10px;
+
   color: #455a64;
-  font-size: 15px;
-  line-height: 1.9;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.diet-page__note p:last-child {
+  margin-bottom: 0;
 }
 
 
 /* =========================
-   Tablet
+   Tablet / Mobile
 ========================= */
 
 @media (max-width: 768px) {
-  .home {
-    padding: 0 16px 60px;
+  .diet-page {
+    padding: 40px 16px 60px;
   }
 
-  .home__hero {
-    padding: 50px 10px 45px;
+  .diet-page__header {
+    margin-bottom: 45px;
   }
 
-  .home__hero h1 {
-    font-size: 32px;
+  .diet-page__header h1 {
+    font-size: 30px;
   }
 
-  .home__hero p {
-    font-size: 16px;
+  .diet-page__header p {
+    font-size: 15px;
   }
 
-  .home__section {
-    margin-bottom: 55px;
+  .diet-page__section {
+    margin-bottom: 45px;
   }
 
-  .home__section h2 {
-    margin-bottom: 22px;
-    font-size: 24px;
+  .diet-page__section h2 {
+    font-size: 23px;
   }
 
-  .home__cards {
+  .diet-page__cards {
     grid-template-columns: 1fr;
     gap: 14px;
   }
 
-  .home__card {
+  .diet-page__card {
     padding: 22px;
   }
 
-  .home__about {
-    padding: 30px 20px;
+  .diet-page__note {
+    padding: 25px 20px;
   }
 }
 
@@ -194,47 +192,23 @@
 ========================= */
 
 @media (max-width: 375px) {
-  .home {
-    padding: 0 12px 50px;
+  .diet-page {
+    padding: 35px 12px 50px;
   }
 
-  .home__hero {
-    padding: 40px 6px 35px;
+  .diet-page__header h1 {
+    font-size: 27px;
   }
 
-  .home__hero h1 {
-    font-size: 28px;
-  }
-
-  .home__hero p {
-    font-size: 15px;
-  }
-
-  .home__section h2 {
-    font-size: 22px;
-  }
-
-  .home__card {
+  .diet-page__card {
     padding: 20px;
   }
 
-  .home__card h3 {
+  .diet-page__card h3 {
     font-size: 18px;
   }
 
-  .home__card p {
-    font-size: 14px;
-  }
-
-  .home__about {
-    padding: 26px 18px;
-  }
-
-  .home__about h2 {
-    font-size: 21px;
-  }
-
-  .home__about p {
+  .diet-page__card p {
     font-size: 14px;
   }
 }

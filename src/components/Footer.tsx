@@ -32,7 +32,7 @@ const Footer = () => {
 
         <div className="footer__links">
           <div className="footer__link-group">
-            <h2>計算ツール</h2>
+            <h2>BMI・体重</h2>
 
             <Link to="/bmi" onClick={() => handleNavClick("/bmi")}>
               BMI計算
@@ -45,6 +45,26 @@ const Footer = () => {
             </Link>
             <Link to="/height-weight" onClick={() => handleNavClick("/height-weight")}>
               身長別体重表
+            </Link>
+          </div>
+
+          <div className="footer__link-group">
+            <h2>ダイエット計算</h2>
+
+            <Link to="/basal-metabolism" onClick={() => handleNavClick("/basal-metabolism")}>
+              基礎代謝計算
+            </Link>
+            <Link to="/calorie-burn" onClick={() => handleNavClick("/calorie-burn")}>
+              消費カロリー計算
+            </Link>
+            <Link to="/calorie-intake" onClick={() => handleNavClick("/calorie-intake")}>
+              摂取カロリー計算
+            </Link>
+            <Link to="/calorie-balance" onClick={() => handleNavClick("/calorie-balance")}>
+              カロリー収支計算
+            </Link>
+            <Link to="/diet-period" onClick={() => handleNavClick("/diet-period")}>
+              ダイエット期間計算
             </Link>
           </div>
 

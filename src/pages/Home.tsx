@@ -1,266 +1,174 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-
-import CalculatorCard from "../components/calculator/CalculatorCard";
-import NumberInput from "../components/calculator/NumberInput";
-import CalculateButton from "../components/calculator/CalculateButton";
-import ResultCard from "../components/calculator/ResultCard";
-
-import { calculateBmi, getBmiCategory } from "../utils/bmi";
-
-import "../components/calculator/Calculator.css";
 import "./Home.css";
 
 const Home = () => {
-  const [height, setHeight] = useState("");
-  const [weight, setWeight] = useState("");
-
-  const [bmi, setBmi] = useState<number | null>(null);
-
-  const handleCalculate = () => {
-    const heightValue = Number(height);
-    const weightValue = Number(weight);
-
-    if (
-      !height ||
-      !weight ||
-      heightValue <= 0 ||
-      weightValue <= 0
-    ) {
-      return;
-    }
-
-    const result = calculateBmi(
-      heightValue,
-      weightValue
-    );
-
-    setBmi(result);
-  };
-
-    const category =
-      bmi !== null
-        ? getBmiCategory(bmi)
-        : null;
-
   return (
     <div className="home">
-
-      {/* =========================
-          Hero
-      ========================= */}
-
+      {/* ヒーロー */}
       <section className="home__hero">
-        <div className="home__hero-inner">
+        <h1>からだ計算ツール</h1>
+        <p>
+          BMIや体重、カロリーなど、
+          健康管理に役立つ計算をかんたんに。
+        </p>
+      </section>
 
-          <p className="home__eyebrow">
-            HEALTH CALCULATOR
-          </p>
+      {/* おすすめの計算ツール */}
+      <section className="home__section">
+        <h2>おすすめの計算ツール</h2>
 
-          <h1 className="home__title">
-            からだの数字を
-            <br />
-            かんたん計算
-          </h1>
-
-          <p className="home__description">
-            BMIや体重など、からだに関する数値を
-            <br className="home__br-pc" />
-            無料でかんたんに計算できます。
-          </p>
-
-
-          {/* =========================
-              BMI Calculator
-          ========================= */}
-
-          <CalculatorCard
-            title="BMIを計算"
-            description="身長と体重を入力してください。"
+        <div className="home__cards">
+          <Link
+            to="/bmi"
+            className="home__card home__card--featured"
           >
-
-            <NumberInput
-              id="height"
-              label="身長"
-              value={height}
-              unit="cm"
-              placeholder="170"
-              onChange={setHeight}
-            />
-
-            <NumberInput
-              id="weight"
-              label="体重"
-              value={weight}
-              unit="kg"
-              placeholder="65"
-              onChange={setWeight}
-            />
-
-            <CalculateButton
-              onClick={handleCalculate}
-            >
-              BMIを計算する
-            </CalculateButton>
-
-          </CalculatorCard>
-
-
-          {/* =========================
-              Result
-          ========================= */}
-
-          {bmi !== null && category !== null && (
-            <ResultCard
-              label="あなたのBMI"
-              value={bmi.toFixed(1)}
-              category={category.label}
-              categoryColor={category.color}
-              links={[
-                {
-                  to: "/ideal-weight",
-                  label: "適正体重を見る",
-                },
-                {
-                  to: "/bmi-table",
-                  label: "BMI早見表を見る",
-                },
-              ]}
-            />
-          )}
-
-        </div>
-      </section>
-
-
-      {/* =========================
-          Tools
-      ========================= */}
-
-      <section className="home__tools">
-
-        <div className="home__section-inner">
-
-          <div className="home__section-heading">
-
-            <p className="home__section-eyebrow">
-              TOOLS
-            </p>
-
-            <h2>
-              その他の計算ツール
-            </h2>
-
+            <h3>BMI計算</h3>
             <p>
-              からだに関する数値を
-              かんたんに確認できます。
+              身長と体重からBMIを計算します。
             </p>
+            <span>計算する →</span>
+          </Link>
 
-          </div>
+          <Link
+            to="/basal-metabolism"
+            className="home__card"
+          >
+            <h3>基礎代謝計算</h3>
+            <p>
+              年齢・性別・身長・体重から基礎代謝量の目安を計算します。
+            </p>
+            <span>計算する →</span>
+          </Link>
 
-
-          <div className="home__tool-grid">
-
-            <Link
-              to="/ideal-weight"
-              className="home__tool-card"
-            >
-              <span className="home__tool-icon">
-                ⚖
-              </span>
-
-              <span className="home__tool-title">
-                適正体重計算
-              </span>
-
-              <span className="home__tool-description">
-                身長から標準体重を計算します。
-              </span>
-
-              <span className="home__tool-arrow">
-                →
-              </span>
-            </Link>
-
-
-            <Link
-              to="/bmi-table"
-              className="home__tool-card"
-            >
-              <span className="home__tool-icon">
-                ▤
-              </span>
-
-              <span className="home__tool-title">
-                BMI早見表
-              </span>
-
-              <span className="home__tool-description">
-                身長と体重からBMIを一覧で確認できます。
-              </span>
-
-              <span className="home__tool-arrow">
-                →
-              </span>
-            </Link>
-
-
-            <Link
-              to="/height-weight"
-              className="home__tool-card"
-            >
-              <span className="home__tool-icon">
-                ↕
-              </span>
-
-              <span className="home__tool-title">
-                身長別体重表
-              </span>
-
-              <span className="home__tool-description">
-                身長ごとのBMI別体重を確認できます。
-              </span>
-
-              <span className="home__tool-arrow">
-                →
-              </span>
-            </Link>
-
-          </div>
-
+          {/* <Link
+            to="/calorie-burn"
+            className="home__card"
+          >
+            <h3>消費カロリー計算</h3>
+            <p>
+              1日の消費カロリーの目安を計算します。
+            </p>
+            <span>計算する →</span>
+          </Link> */}
         </div>
-
       </section>
 
+      {/* BMI・体重計算 */}
+      <section className="home__section">
+        <h2>BMI・体重計算</h2>
 
-      {/* =========================
-          About
-      ========================= */}
+        <div className="home__cards">
+          <Link to="/bmi" className="home__card">
+            <h3>BMI計算</h3>
+            <p>
+              身長と体重からBMIを計算します。
+            </p>
+            <span>計算する →</span>
+          </Link>
 
+          <Link to="/ideal-weight" className="home__card">
+            <h3>適正体重計算</h3>
+            <p>
+              身長から標準体重の目安を計算します。
+            </p>
+            <span>計算する →</span>
+          </Link>
+
+          <Link to="/bmi-table" className="home__card">
+            <h3>BMI早見表</h3>
+            <p>
+              身長と体重からBMIの目安を一覧で確認できます。
+            </p>
+            <span>早見表を見る →</span>
+          </Link>
+
+          <Link to="/height-weight" className="home__card">
+            <h3>身長別体重</h3>
+            <p>
+              身長からBMIごとの体重の目安を確認できます。
+            </p>
+            <span>一覧を見る →</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* ダイエット計算 */}
+      <section className="home__section">
+        <h2>ダイエット計算</h2>
+
+        <div className="home__cards">
+          <Link
+            to="/basal-metabolism"
+            className="home__card"
+          >
+            <h3>基礎代謝計算</h3>
+            <p>
+              基礎代謝量の目安を計算します。
+            </p>
+            <span>計算する →</span>
+          </Link>
+
+          <Link
+            to="/calorie-burn"
+            className="home__card"
+          >
+            <h3>消費カロリー計算</h3>
+            <p>
+              1日の消費カロリーの目安を計算します。
+            </p>
+            <span>計算する →</span>
+          </Link>
+
+          <Link
+            to="/calorie-intake"
+            className="home__card"
+          >
+            <h3>摂取カロリー計算</h3>
+            <p>
+              ダイエット中の摂取カロリーの目安を計算します。
+            </p>
+            <span>計算する →</span>
+          </Link>
+
+          <Link
+            to="/calorie-balance"
+            className="home__card"
+          >
+            <h3>カロリー収支計算</h3>
+            <p>
+              摂取カロリーと消費カロリーの差を計算します。
+            </p>
+            <span>計算する →</span>
+          </Link>
+
+          <Link
+            to="/diet-period"
+            className="home__card"
+          >
+            <h3>ダイエット期間計算</h3>
+            <p>
+              目標体重までの期間の目安を計算します。
+            </p>
+            <span>計算する →</span>
+          </Link>
+        </div>
+
+        {/* <div className="home__more">
+          <Link to="/diet">
+            ダイエット計算をすべて見る →
+          </Link>
+        </div> */}
+      </section>
+
+      {/* サイトについて */}
       <section className="home__about">
+        <h2>からだ計算ツールについて</h2>
 
-        <div className="home__about-inner">
-
-          <p className="home__section-eyebrow">
-            ABOUT
-          </p>
-
-          <h2>
-            からだの数字を
-            <br />
-            もっと身近に。
-          </h2>
-
-          <p>
-            からだ計算ツールは、BMIや体重などの
-            <br className="home__br-pc" />
-            数値をかんたんに確認できる無料ツールです。
-          </p>
-
-        </div>
-
+        <p>
+          からだ計算ツールでは、BMIや体重、カロリーなど、
+          健康管理に役立つ計算ツールを提供しています。
+        </p>
       </section>
-
     </div>
   );
 };

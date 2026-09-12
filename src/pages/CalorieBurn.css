@@ -1,0 +1,281 @@
+.calorie-burn {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px 80px;
+}
+
+.calorie-burn__header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.calorie-burn__header h1 {
+  margin: 0 0 18px;
+  color: #263238;
+  font-size: 36px;
+  line-height: 1.4;
+}
+
+.calorie-burn__header p {
+  margin: 0;
+  color: #546e7a;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 共通ラベル */
+
+.calorie-burn__label {
+  margin: 0 0 10px;
+  color: #263238;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* 性別 */
+
+.calorie-burn__gender {
+  margin-bottom: 20px;
+}
+
+.calorie-burn__gender-options {
+  display: flex;
+  gap: 12px;
+}
+
+.calorie-burn__gender-options label {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 15px;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #455a64;
+  font-size: 15px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.calorie-burn__gender-options label:hover {
+  border-color: #4caf7d;
+  background-color: #f3faf6;
+}
+
+.calorie-burn__gender-options input {
+  margin: 0;
+  accent-color: #4caf7d;
+}
+
+/* 身体活動レベル */
+
+.calorie-burn__activity {
+  margin-top: 8px;
+  margin-bottom: 22px;
+}
+
+.calorie-burn__activity-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calorie-burn__activity-options label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.calorie-burn__activity-options label:hover {
+  border-color: #4caf7d;
+  background-color: #f3faf6;
+}
+
+.calorie-burn__activity-options label.is-selected {
+  border-color: #4caf7d;
+  background-color: #f3faf6;
+}
+
+.calorie-burn__activity-options input {
+  margin-top: 3px;
+  accent-color: #4caf7d;
+}
+
+.calorie-burn__activity-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.calorie-burn__activity-content strong {
+  color: #263238;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.calorie-burn__activity-content small {
+  color: #607d8b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* 計算結果 */
+
+.calorie-burn__results {
+  margin-top: 25px;
+}
+
+.calorie-burn__basal {
+  margin-top: 12px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  background-color: #f3faf6;
+  text-align: center;
+}
+
+.calorie-burn__basal p {
+  margin: 0;
+  color: #546e7a;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.calorie-burn__basal strong {
+  margin-left: 5px;
+  color: #2e7d57;
+}
+
+/* 説明 */
+
+.calorie-burn__section {
+  margin-top: 45px;
+}
+
+.calorie-burn__section h2 {
+  margin: 0 0 18px;
+  padding-left: 14px;
+  border-left: 5px solid #4caf7d;
+  color: #263238;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.calorie-burn__section p {
+  margin: 0 0 14px;
+  color: #455a64;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.calorie-burn__section p:last-child {
+  margin-bottom: 0;
+}
+
+/* 身体活動レベルの説明 */
+
+.calorie-burn__activity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.calorie-burn__activity-info-item {
+  padding: 18px 20px;
+  border: 1px solid #e0e8e4;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.calorie-burn__activity-info-item h3 {
+  margin: 0 0 7px;
+  color: #263238;
+  font-size: 16px;
+}
+
+.calorie-burn__activity-info-item p {
+  margin: 0;
+  color: #607d8b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* タブレット・スマホ */
+
+@media (max-width: 768px) {
+  .calorie-burn {
+    padding: 40px 16px 60px;
+  }
+
+  .calorie-burn__header {
+    margin-bottom: 32px;
+  }
+
+  .calorie-burn__header h1 {
+    font-size: 30px;
+  }
+
+  .calorie-burn__header p {
+    font-size: 15px;
+  }
+
+  .calorie-burn__section {
+    margin-top: 38px;
+  }
+
+  .calorie-burn__section h2 {
+    font-size: 22px;
+  }
+}
+
+/* 小さいスマホ */
+
+@media (max-width: 375px) {
+  .calorie-burn {
+    padding: 35px 12px 50px;
+  }
+
+  .calorie-burn__header h1 {
+    font-size: 27px;
+  }
+
+  .calorie-burn__header p {
+    font-size: 14px;
+  }
+
+  .calorie-burn__gender-options {
+    gap: 8px;
+  }
+
+  .calorie-burn__gender-options label {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+
+  .calorie-burn__activity-options label {
+    padding: 13px;
+  }
+
+  .calorie-burn__activity-content small {
+    font-size: 12px;
+  }
+
+  .calorie-burn__section h2 {
+    font-size: 21px;
+  }
+
+  .calorie-burn__section p {
+    font-size: 14px;
+  }
+}
