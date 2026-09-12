@@ -71,11 +71,21 @@ const Footer = () => {
           <div className="footer__link-group">            
             <h2>サイトについて</h2>
 
-            <Link to="/about">サイトについて</Link>
-            <Link to="/privacy">プライバシーポリシー</Link>
-            <Link to="/terms">利用規約</Link>
-            <Link to="/disclaimer">免責事項</Link>
-            <Link to="/contact">お問い合わせ</Link>
+            <Link to="/about" onClick={() => handleNavClick("/about")}>
+              サイトについて
+            </Link>
+            <Link to="/privacy" onClick={() => handleNavClick("/privacy")}>
+              プライバシーポリシー
+            </Link>
+            <Link to="/terms" onClick={() => handleNavClick("/terms")}>
+              利用規約
+            </Link>
+            <Link to="/disclaimer" onClick={() => handleNavClick("/disclaimer")}>
+              免責事項
+            </Link>
+            <Link to="/contact" onClick={() => handleNavClick("/contact")}>
+              お問い合わせ
+            </Link>
           </div>
         </div>
       </div>

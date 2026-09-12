@@ -26,6 +26,12 @@
   color: #455a64;
 }
 
+.info-page li {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  color: #455a64;
+}
+
 .info-page a {
   color: #4caf7d;
   text-decoration: underline;
