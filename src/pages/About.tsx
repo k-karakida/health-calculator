@@ -1,8 +1,17 @@
+import { Helmet } from "react-helmet-async";
+
 import "./InfoPage.css";
 
 const About = () => {
   return (
     <div className="info-page">
+      <Helmet>
+        <title>このサイトについて｜からだ計算ツール</title>
+        <meta
+          name="description"
+          content="からだ計算ツールについて、サイトの目的や提供している計算ツールについて紹介しています。"
+        />
+      </Helmet>
       <h1>サイトについて</h1>
 
       <section>

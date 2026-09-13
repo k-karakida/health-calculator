@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+
 import CalculatorCard from "../components/calculator/CalculatorCard";
 import NumberInput from "../components/calculator/NumberInput";
 import CalculateButton from "../components/calculator/CalculateButton";
 import ResultCard from "../components/calculator/ResultCard";
+import CalculatorLinks from "../components/calculator/CalculatorLinks";
+
 import {
   calculateBasalMetabolism,
   roundCalories,
@@ -51,6 +55,13 @@ const BasalMetabolism = () => {
 
   return (
     <div className="basal-metabolism">
+      <Helmet>
+        <title>基礎代謝計算｜年齢・身長・体重から基礎代謝量を計算</title>
+        <meta
+          name="description"
+          content="年齢、性別、身長、体重から基礎代謝量の目安を計算できます。ダイエットや健康管理の参考に利用できる無料計算ツールです。"
+        />
+      </Helmet>
       <section className="basal-metabolism__header">
         <h1>基礎代謝計算</h1>
         <p>
@@ -171,6 +182,16 @@ const BasalMetabolism = () => {
           身体活動レベルを加味した
           「消費カロリー計算」をご利用ください。
         </p>
+      </section>
+      <section className="basal-metabolism__section">
+        <CalculatorLinks
+          links={[
+            { to: "/calorie-burn", label: "消費カロリーを計算する" },
+            { to: "/calorie-intake", label: "摂取カロリーを計算する" },
+            { to: "/calorie-balance", label: "カロリー収支を計算する" },
+            { to: "/diet-period", label: "ダイエット期間を計算する" },
+          ]}
+        />
       </section>
     </div>
   );

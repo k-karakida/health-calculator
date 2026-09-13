@@ -1,7 +1,17 @@
+import { Helmet } from "react-helmet-async";
+
 import "./InfoPage.css";
+
 const Contact = () => {
   return (
     <div className="info-page">
+      <Helmet>
+        <title>お問い合わせ｜からだ計算ツール</title>
+        <meta
+          name="description"
+          content="からだ計算ツールへのお問い合わせはこちらから。サイトや計算ツールに関するご意見・ご質問を受け付けています。"
+        />
+      </Helmet>
       <h1>お問い合わせ</h1>
 
       <section>

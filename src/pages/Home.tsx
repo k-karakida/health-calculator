@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import "./Home.css";
 
 const Home = () => {
   return (
     <div className="home">
+      <Helmet>
+        <title>からだ計算ツール｜BMI・体重・カロリーを無料計算</title>
+        <meta
+          name="description"
+          content="BMI、標準体重、基礎代謝、消費カロリー、摂取カロリーなどを無料で計算できる健康計算ツールです。"
+        />
+      </Helmet>
       {/* ヒーロー */}
       <section className="home__hero">
         <h1>からだ計算ツール</h1>

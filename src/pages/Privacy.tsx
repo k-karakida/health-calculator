@@ -1,8 +1,17 @@
+import { Helmet } from "react-helmet-async";
+
 import "./InfoPage.css";
 
 const Privacy = () => {
   return (
     <div className="info-page">
+      <Helmet>
+        <title>プライバシーポリシー｜からだ計算ツール</title>
+        <meta
+          name="description"
+          content="からだ計算ツールのプライバシーポリシーです。個人情報、Cookie、アクセス解析、広告などの取り扱いについて説明しています。"
+        />
+      </Helmet>
       <h1>プライバシーポリシー</h1>
 
       <section>

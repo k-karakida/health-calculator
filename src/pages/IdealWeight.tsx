@@ -1,13 +1,14 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 import CalculatorCard from "../components/calculator/CalculatorCard";
 import NumberInput from "../components/calculator/NumberInput";
 import CalculateButton from "../components/calculator/CalculateButton";
 import ResultCard from "../components/calculator/ResultCard";
+import CalculatorLinks from "../components/calculator/CalculatorLinks";
 
 import { calculateStandardWeight } from "../utils/bmi";
 
-import "../components/calculator/Calculator.css";
 import "./Bmi.css";
 
 // 適正体重計算のページ
@@ -35,6 +36,13 @@ const IdealWeight = () => {
 
   return (
     <div className="calculator-page">
+      <Helmet>
+        <title>適正体重計算｜身長から適正体重を計算｜からだ計算ツール</title>
+        <meta
+          name="description"
+          content="身長を入力するだけで適正体重の目安を計算できます。BMI22を基準にした適正体重を確認できる無料計算ツールです。"
+        />
+      </Helmet>
 
       <section className="calculator-page__hero">
 
@@ -99,6 +107,64 @@ const IdealWeight = () => {
           あくまで目安としてご利用ください。
         </p>
 
+      </section>
+
+      <section className="calculator-page__content">
+        <h2>適正体重の計算方法</h2>
+
+        <p>
+          適正体重は、身長からBMIを基準にして計算できます。
+        </p>
+
+        <p>
+          当サイトでは、BMI 22を基準として適正体重の目安を計算しています。
+        </p>
+
+        <p>
+          計算式は「身長（m）× 身長（m）× 22」です。
+        </p>
+      </section>
+
+      <section className="calculator-page__content">
+        <h2>身長別の適正体重</h2>
+
+        <p>
+          適正体重は身長によって異なります。
+          身長が高くなるほど、適正体重の目安も変わります。
+        </p>
+
+        <p>
+          当サイトでは、身長ごとの適正体重の目安を確認できます。
+        </p>
+      </section>
+
+      <section className="calculator-page__content">
+        <h2>適正体重の見方</h2>
+
+        <p>
+          適正体重は、健康管理や体重管理を考える際の
+          ひとつの目安です。
+        </p>
+
+        <p>
+          実際の健康状態や体型には個人差があるため、
+          適正体重の数値だけで健康状態を判断することはできません。
+        </p>
+
+        <p>
+          BMIや体脂肪率、生活習慣なども含めて、
+          自分の健康状態を考えることが大切です。
+        </p>
+      </section>
+
+      <section className="calculator-page__content">
+        <CalculatorLinks
+          links={[
+            { to: "/bmi", label: "BMIを計算する" },
+            { to: "/bmi-table", label: "BMI早見表を見る" },
+            { to: "/height-weight", label: "身長別体重目安を見る" },
+          ]}
+        />
       </section>
 
     </div>

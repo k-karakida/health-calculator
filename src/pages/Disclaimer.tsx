@@ -1,8 +1,17 @@
+import { Helmet } from "react-helmet-async";
+
 import "./InfoPage.css";
 
 const Disclaimer = () => {
   return (
     <div className="info-page">
+      <Helmet>
+        <title>免責事項｜からだ計算ツール</title>
+        <meta
+          name="description"
+          content="からだ計算ツールの免責事項です。計算結果や健康情報の利用に関する注意事項について説明しています。"
+        />
+      </Helmet>
       <h1>免責事項</h1>
 
       <section>

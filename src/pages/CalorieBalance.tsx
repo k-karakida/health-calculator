@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+
 import CalculatorCard from "../components/calculator/CalculatorCard";
 import NumberInput from "../components/calculator/NumberInput";
 import CalculateButton from "../components/calculator/CalculateButton";
 import ResultCard from "../components/calculator/ResultCard";
+import CalculatorLinks from "../components/calculator/CalculatorLinks";
+
 import "./CalorieBalance.css";
 
 // カロリー収支計算のページ
@@ -89,6 +93,13 @@ const CalorieBalance = () => {
 
   return (
     <div className="calorie-balance">
+      <Helmet>
+        <title>カロリー収支計算｜摂取・消費カロリーの差を計算</title>
+        <meta
+          name="description"
+          content="1日の摂取カロリーと消費カロリーからカロリー収支を計算できます。プラス・マイナスの状態を確認できる無料計算ツールです。"
+        />
+      </Helmet>
       <section className="calorie-balance__header">
         <h1>カロリー収支計算</h1>
 
@@ -217,6 +228,22 @@ const CalorieBalance = () => {
       </section>
 
       <section className="calorie-balance__section">
+        <h2>カロリー収支の計算方法</h2>
+
+        <p>
+          カロリー収支は、1日の摂取カロリーから消費カロリーを引いて計算します。
+        </p>
+
+        <p>
+          「摂取カロリー − 消費カロリー」でカロリー収支を求めることができます。
+        </p>
+
+        <p>
+          計算結果を体重管理やダイエットの参考としてご利用ください。
+        </p>
+      </section>
+
+      <section className="calorie-balance__section">
         <h2>計算結果について</h2>
 
         <p>
@@ -234,6 +261,16 @@ const CalorieBalance = () => {
           栄養バランスや体調にも注意しながら
           体重を管理することが大切です。
         </p>
+      </section>
+      <section className="calorie-balance__section">
+        <CalculatorLinks
+          links={[
+            { to: "/calorie-intake", label: "摂取カロリーを計算する" },
+            { to: "/calorie-burn", label: "消費カロリーを計算する" },
+            { to: "/basal-metabolism", label: "基礎代謝を計算する" },
+            { to: "/diet-period", label: "ダイエット期間を計算する" },
+          ]}
+        />
       </section>
     </div>
   );

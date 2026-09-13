@@ -209,3 +209,38 @@
     display: block;
   }
 }
+
+/* 関連する計算ツール */
+.calculator-links {
+  margin-top: 40px;
+}
+
+.calculator-links h2 {
+  margin-bottom: 20px;
+}
+
+.calculator-links__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.calculator-links__list a {
+  display: block;
+  padding: 14px 16px;
+  background-color: #E8F5EE;
+  color: #2E7D5B;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.calculator-links__list a:hover {
+  background-color: #D8EDE2;
+}
+
+.calculator-links__list a:focus-visible {
+  outline: 2px solid #4CAF7D;
+  outline-offset: 2px;
+}

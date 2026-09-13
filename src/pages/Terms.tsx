@@ -1,8 +1,17 @@
+import { Helmet } from "react-helmet-async";
+
 import "./InfoPage.css";
 
 const Terms = () => {
   return (
     <div className="info-page">
+      <Helmet>
+        <title>利用規約｜からだ計算ツール</title>
+        <meta
+          name="description"
+          content="からだ計算ツールの利用規約です。サイトの利用条件や計算結果に関する注意事項について説明しています。"
+        />
+      </Helmet>
       <h1>利用規約</h1>
 
       <section>

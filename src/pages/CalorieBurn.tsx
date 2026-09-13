@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+
 import CalculatorCard from "../components/calculator/CalculatorCard";
 import NumberInput from "../components/calculator/NumberInput";
 import CalculateButton from "../components/calculator/CalculateButton";
 import ResultCard from "../components/calculator/ResultCard";
+import CalculatorLinks from "../components/calculator/CalculatorLinks";
+
 import {
   calculateBasalMetabolism,
   roundCalories,
@@ -97,6 +101,13 @@ const CalorieBurn = () => {
 
   return (
     <div className="calorie-burn">
+      <Helmet>
+        <title>消費カロリー計算｜1日の消費カロリーを計算</title>
+        <meta
+          name="description"
+          content="年齢、性別、身長、体重、活動量から1日の消費カロリーの目安を計算できます。ダイエットや体重管理の参考に利用できます。"
+        />
+      </Helmet>
       <section className="calorie-burn__header">
         <h1>消費カロリー計算</h1>
         <p>
@@ -286,6 +297,16 @@ const CalorieBurn = () => {
           計算結果だけでなく、体重の変化や日々の体調なども
           あわせて確認することをおすすめします。
         </p>
+      </section>
+      <section className="calorie-burn__section">
+        <CalculatorLinks
+          links={[
+            { to: "/basal-metabolism", label: "基礎代謝を計算する" },
+            { to: "/calorie-intake", label: "摂取カロリーを計算する" },
+            { to: "/calorie-balance", label: "カロリー収支を計算する" },
+            { to: "/diet-period", label: "ダイエット期間を計算する" },
+          ]}
+        />
       </section>
     </div>
   );

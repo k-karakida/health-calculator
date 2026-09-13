@@ -1,9 +1,21 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
+import CalculatorLinks from "../components/calculator/CalculatorLinks";
+
 import "./Diet.css";
 
 const Diet = () => {
   return (
     <div className="diet-page">
+      <Helmet>
+        <title>ダイエット計算｜基礎代謝・カロリー・期間を計算</title>
+        <meta
+          name="description"
+          content="基礎代謝、消費カロリー、摂取カロリー、カロリー収支、ダイエット期間など、ダイエットに役立つ計算ツールをまとめています。"
+        />
+      </Helmet>
+      
       {/* ページタイトル */}
       <section className="diet-page__header">
         <h1>ダイエット計算</h1>
@@ -91,6 +103,17 @@ const Diet = () => {
           個人の健康状態などによって適切な体重や
           カロリーは異なります。
         </p>
+      </section>
+      
+      <section className="diet-page__content">
+        <CalculatorLinks
+          links={[
+            { to: "/bmi", label: "BMIを計算する" },
+            { to: "/ideal-weight", label: "適正体重を計算する" },
+            { to: "/bmi-table", label: "BMI早見表を見る" },
+            { to: "/height-weight", label: "身長別体重目安を見る" },
+          ]}
+        />
       </section>
     </div>
   );

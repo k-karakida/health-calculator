@@ -1,7 +1,7 @@
 .diet-page {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 50px 20px 80px;
+  padding: 50px 20px 30px;
 }
 
 
@@ -211,4 +211,13 @@
   .diet-page__card p {
     font-size: 14px;
   }
+}
+
+.diet-page__content h2 {
+  margin: 0 0 18px;
+  padding-left: 14px;
+  border-left: 5px solid #4caf7d;
+  color: #263238;
+  font-size: 24px;
+  line-height: 1.5;
 }

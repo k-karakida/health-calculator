@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+
 import CalculatorCard from "../components/calculator/CalculatorCard";
 import NumberInput from "../components/calculator/NumberInput";
 import CalculateButton from "../components/calculator/CalculateButton";
 import ResultCard from "../components/calculator/ResultCard";
+import CalculatorLinks from "../components/calculator/CalculatorLinks";
+
 import "./DietPeriod.css";
 
 const DietPeriod = () => {
@@ -46,6 +50,13 @@ const DietPeriod = () => {
 
   return (
     <div className="diet-period">
+      <Helmet>
+        <title>ダイエット期間計算｜目標体重までの期間を計算</title>
+        <meta
+          name="description"
+          content="現在の体重、目標体重、1週間あたりの減量目標から、目標体重までの期間の目安を計算できます。"
+        />
+      </Helmet>
       <section className="diet-period__header">
         <h1>ダイエット期間計算</h1>
         <p>
@@ -226,6 +237,25 @@ const DietPeriod = () => {
       </section>
 
       <section className="diet-period__section">
+        <h2>ダイエット期間の目安について</h2>
+
+        <p>
+          ダイエットに必要な期間は、現在の体重や目標体重、
+          1週間あたりの減量目標などによって異なります。
+        </p>
+
+        <p>
+          当サイトでは、設定した減量目標をもとに、
+          目標体重までの期間の目安を計算しています。
+        </p>
+
+        <p>
+          実際の体重の変化には個人差があるため、
+          計算結果はあくまで目安としてご利用ください。
+        </p>
+      </section>
+
+      <section className="diet-period__section">
         <h2>計算結果について</h2>
 
         <p>
@@ -243,6 +273,32 @@ const DietPeriod = () => {
           健康状態や体調にも注意しながら
           体重管理を行うことをおすすめします。
         </p>
+      </section>
+
+      <section className="diet-period__section">
+        <h2>無理のない減量について</h2>
+
+        <p>
+          急激な体重減少を目指すのではなく、
+          自分の体調や生活習慣に合わせて無理のないペースで
+          体重を管理することが大切です。
+        </p>
+
+        <p>
+          ダイエット期間の計算結果は目安として利用し、
+          実際の体重の変化を確認しながら目標を調整してください。
+        </p>
+      </section>
+
+      <section className="diet-period__section">
+        <CalculatorLinks
+          links={[
+            { to: "/calorie-intake", label: "摂取カロリーを計算する" },
+            { to: "/calorie-burn", label: "消費カロリーを計算する" },
+            { to: "/calorie-balance", label: "カロリー収支を計算する" },
+            { to: "/basal-metabolism", label: "基礎代謝を計算する" },
+          ]}
+        />
       </section>
     </div>
   );

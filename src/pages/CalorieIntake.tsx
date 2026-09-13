@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+
 import CalculatorCard from "../components/calculator/CalculatorCard";
 import NumberInput from "../components/calculator/NumberInput";
 import CalculateButton from "../components/calculator/CalculateButton";
 import ResultCard from "../components/calculator/ResultCard";
+import CalculatorLinks from "../components/calculator/CalculatorLinks";
+
 import {
   calculateBasalMetabolism,
   roundCalories,
@@ -131,6 +135,13 @@ const CalorieIntake = () => {
 
   return (
     <div className="calorie-intake">
+      <Helmet>
+        <title>摂取カロリー計算｜1日の目標摂取カロリーを計算</title>
+        <meta
+          name="description"
+          content="年齢、性別、身長、体重、活動量、目標から1日の摂取カロリーの目安を計算できます。体重管理やダイエットの参考に利用できます。"
+        />
+      </Helmet>
       <section className="calorie-intake__header">
         <h1>摂取カロリー計算</h1>
         <p>
@@ -341,6 +352,23 @@ const CalorieIntake = () => {
       </section>
 
       <section className="calorie-intake__section">
+        <h2>目標別の摂取カロリーについて</h2>
+
+        <p>
+          目標とする体重の変化によって、1日の摂取カロリーの目安は変わります。
+        </p>
+
+        <p>
+          当サイトでは、現状維持や減量などの目標に応じて、
+          1日の摂取カロリーの目安を計算しています。
+        </p>
+
+        <p>
+          計算結果はあくまで目安としてご利用ください。
+        </p>
+      </section>
+
+      <section className="calorie-intake__section">
         <h2>無理なカロリー制限に注意</h2>
 
         <p>
@@ -351,6 +379,18 @@ const CalorieIntake = () => {
           体重を管理することが大切です。
         </p>
       </section>
+
+      <section className="calorie-intake__section">
+        <CalculatorLinks
+          links={[
+            { to: "/calorie-burn", label: "消費カロリーを計算する" },
+            { to: "/basal-metabolism", label: "基礎代謝を計算する" },
+            { to: "/calorie-balance", label: "カロリー収支を計算する" },
+            { to: "/diet-period", label: "ダイエット期間を計算する" },
+          ]}
+        />
+      </section>
+
     </div>
   );
 };

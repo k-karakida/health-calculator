@@ -3,6 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import "./Layout.css";
+import "./calculator/Calculator.css";
 
 type LayoutProps = {
   children: ReactNode;
