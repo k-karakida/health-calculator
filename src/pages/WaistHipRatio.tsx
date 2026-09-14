@@ -54,8 +54,6 @@ const WaistHipRatio = () => {
     }
   };
 
-  const standard = gender === "male" ? 0.9 : 0.85;
-
   return (
     <div className="waist-hip-ratio">
       <Helmet>
