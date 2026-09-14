@@ -1,0 +1,150 @@
+.waist-check {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px 30px;
+}
+
+.waist-check__header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.waist-check__header h1 {
+  margin: 0 0 18px;
+  color: #263238;
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+.waist-check__header p {
+  margin: 0;
+  color: #546e7a;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.waist-check__section {
+  margin-top: 45px;
+}
+
+.waist-check__section h2 {
+  margin: 0 0 18px;
+  padding-left: 14px;
+  border-left: 5px solid #4caf7d;
+  color: #263238;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.waist-check__section p {
+  margin: 0 0 14px;
+  color: #455a64;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* 性別 */
+.waist-check__gender {
+  margin-bottom: 20px;
+}
+
+.waist-check__label {
+  margin: 0 0 10px;
+  color: #263238;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.waist-check__gender-options {
+  display: flex;
+  gap: 12px;
+}
+
+.waist-check__gender-options label {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 15px;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #455a64;
+  font-size: 15px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.waist-check__gender-options label:hover {
+  border-color: #4caf7d;
+  background-color: #f3faf6;
+}
+
+.waist-check__gender-options input {
+  margin: 0;
+  accent-color: #4caf7d;
+}
+
+/* エラー */
+.waist-check__error {
+  margin: 0;
+  color: #d32f2f;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 基準値 */
+.waist-check__standards {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.waist-check__standard {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  background-color: #f8fbf9;
+  text-align: center;
+}
+
+.waist-check__standard span {
+  display: block;
+  margin-bottom: 8px;
+  color: #546e7a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.waist-check__standard strong {
+  color: #263238;
+  font-size: 22px;
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+  .waist-check {
+    padding: 40px 16px 30px;
+  }
+
+  .waist-check__header h1 {
+    font-size: 26px;
+  }
+
+  .waist-check__section h2 {
+    font-size: 21px;
+  }
+
+  .waist-check__gender-options {
+    gap: 8px;
+  }
+
+  .waist-check__standards {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

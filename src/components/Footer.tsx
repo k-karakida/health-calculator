@@ -68,6 +68,20 @@ const Footer = () => {
             </Link>
           </div>
 
+          <div className="footer__link-group">
+            <h2>体型チェック</h2>
+
+            <Link to="/body-fat" onClick={() => handleNavClick("/body-fat")}>
+              体脂肪率計算
+            </Link>
+            <Link to="/waist-hip-ratio" onClick={() => handleNavClick("/waist-hip-ratio")}>
+              ウエストヒップ比
+            </Link>
+            <Link to="/waist-check" onClick={() => handleNavClick("/waist-check")}>
+              腹囲チェック
+            </Link>
+          </div>
+
           <div className="footer__link-group">            
             <h2>サイトについて</h2>
 

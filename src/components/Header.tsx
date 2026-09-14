@@ -216,8 +216,61 @@ const Header = () => {
               </Link>
 
             </div>
+
           </div>
 
+          {/* 体脂肪率計算 */}
+          <div
+            className={`header__dropdown ${
+              openDropdown === "body-fat"
+                ? "is-open"
+                : ""
+            }`}
+          >
+            <button
+              type="button"
+              className="header__dropdown-button"
+              onClick={() =>
+                handleDropdownClick("body-fat")
+              }
+            >
+              体型チェック
+              <span className="header__arrow">
+                ▼
+              </span>
+            </button>
+
+            <div className="header__dropdown-menu">
+
+              <Link
+                to="/body-fat"
+                onClick={() =>
+                  handleNavClick("/body-fat")
+                }
+              >
+                体脂肪率計算
+              </Link>
+
+              <Link
+                to="/waist-hip-ratio"
+                onClick={() =>
+                  handleNavClick("/waist-hip-ratio")
+                }
+              >
+                ウエストヒップ比
+              </Link>
+              
+              <Link
+                to="/waist-check"
+                onClick={() =>
+                  handleNavClick("/waist-check")
+                }
+              >
+                腹囲チェック
+              </Link>
+
+            </div>
+          </div>
         </nav>
       </div>
     </header>

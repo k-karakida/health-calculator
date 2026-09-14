@@ -1,0 +1,98 @@
+.body-fat {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px 30px;
+}
+
+.body-fat__header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.body-fat__header h1 {
+  margin: 0 0 18px;
+  color: #263238;
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+.body-fat__header p {
+  margin: 0;
+  color: #546e7a;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.body-fat h1 {
+  margin-bottom: 32px;
+}
+
+.body-fat__section {
+  margin-top: 45px;
+}
+
+.body-fat__section h2 {
+  margin: 0 0 18px;
+  padding-left: 14px;
+  border-left: 5px solid #4caf7d;
+  color: #263238;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.body-fat__section p {
+  margin: 0 0 14px;
+  color: #455a64;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.body-fat__error {
+  margin: 0;
+  color: #D32F2F;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.body-fat__gender {
+  margin-bottom: 20px;
+}
+
+.body-fat__label {
+  margin: 0 0 10px;
+  color: #263238;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.body-fat__gender-options {
+  display: flex;
+  gap: 12px;
+}
+
+.body-fat__gender-options label {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 15px;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #455a64;
+  font-size: 15px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.body-fat__gender-options label:hover {
+  border-color: #4caf7d;
+  background-color: #f3faf6;
+}
+
+.body-fat__gender-options input {
+  margin: 0;
+  accent-color: #4caf7d;
+}

@@ -14,6 +14,10 @@ import CalorieIntake from "./pages/CalorieIntake";
 import CalorieBalance from "./pages/CalorieBalance";
 import DietPeriod from "./pages/DietPeriod";
 
+import BodyFat from "./pages/BodyFat";
+import WaistHipRatio from "./pages/WaistHipRatio";
+import WaistCheck from "./pages/WaistCheck";
+
 import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
@@ -39,6 +43,11 @@ function App() {
           <Route path="/calorie-intake" element={<CalorieIntake />} />
           <Route path="/calorie-balance" element={<CalorieBalance />} />
           <Route path="/diet-period" element={<DietPeriod />} />
+          
+          {/* 体脂肪率計算 */}
+          <Route path="/body-fat" element={<BodyFat />} />
+          <Route path="/waist-hip-ratio" element={<WaistHipRatio />} />
+          <Route path="/waist-check" element={<WaistCheck />} />
 
           {/* その他 */}
           <Route path="/about" element={<About />} />
